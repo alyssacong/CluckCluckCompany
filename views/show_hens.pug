@@ -1,0 +1,26 @@
+html
+    head
+        title Hens
+        style
+          include show_hens.css
+    body
+        if(type == "error")
+            h3(style = "color:red") #{message}
+        else
+            table
+                thead
+                    tr
+                        th Name
+                        th Breed
+                        th Description
+                        th Date
+                tbody
+                    each hen in hens
+                        tr
+                            td #{hen.name}
+                            td #{hen.breed}
+                            td #{hen.description}
+                            td #{hen.month}/#{hen.day}/#{hen.year}
+            p
+            a(href='/owner/hen') Add a Hen
+            a(href='/') Return to Home

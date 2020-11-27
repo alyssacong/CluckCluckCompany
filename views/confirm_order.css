@@ -1,0 +1,35 @@
+body {
+  background: url('/chick.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+h1 {
+  position: center;
+  border-radius: 25px;
+  border: 3px solid #892f16;
+  background-color: #f3e6dd;
+  padding: 20px;
+  width: 900px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #892f16;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+}
+
+a:link, a:visited {
+  border-radius: 10px;
+  border: 1px solid #892f16;
+  background-color: #f3e6dd;
+  color: #892f16;
+  padding: 20px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #f0ead6;
+}

@@ -1,0 +1,30 @@
+html
+    head
+        title Add a Hen
+        style
+          include add_hen.css
+    body
+      div
+        form(action = "/owner/hen", method = "POST")
+            div
+                label(for = "name") Name:
+                input(type='text', name = "name")
+            div
+                label(for = "breed") Breed:
+                input(type='text', name = "breed")
+            div
+                label(for = "description") Description:
+                input(type='text', name = "description")
+            div
+                p Date of First Egg Laid:
+                label(for = "month") Month:
+                input(type='text', name = "month")
+                label(for = "day") Day:
+                input(type='text', name = "day")
+                label(for = "year") Year:
+                input(type='text', name = "year")
+            div(class='button')
+              button(type = "submit") Add Hen
+        a(href='/owner') Back
+        p
+        a(href='/') Return to Home

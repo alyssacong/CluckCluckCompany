@@ -1,0 +1,34 @@
+html
+    head
+        title Hens
+        style
+          include show_eggs.css
+    body
+        if(type == "error")
+            h3(style = "color:red") #{message}
+        else
+          form(action = "/customer/confirm_order", method = "POST")
+            table
+                thead
+                    tr
+                        th Name
+                        th Breed
+                        th Description
+                        th Number of Eggs for Sale
+                        th Buy Eggs
+                tbody
+                    each hen in hens
+                        tr
+                            td #{hen.name}
+                            td #{hen.breed}
+                            td #{hen.description}
+                            td #{hen.eggNumber}
+                            td
+                              select(name=hen._id)
+                                - var i = 0
+                                while i <= hen.maxEggs
+                                  option=i++
+            div(class='button')
+              button(type="submit") Buy Eggs
+          p
+          a(href='/') Return to Home
