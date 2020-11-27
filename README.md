@@ -4,12 +4,16 @@ This is a platform built for a chicken farm, Cluck Cluck Company, for owners to 
 
 ## Installation
 
-This project is built upon Express, Node.js, and Mongoose.
+This project is built upon Express, Node.js, and Mongoose, and uses Nodemon, bodyParser, and Pug files.
 For Node.js installation, follow the instructions on nodejs.org to download and install the latest version.
 For MongoDB installation, follow the instructions on mongodb.com to download and install the latest MongoDB release.
 
-Download the .zip file and extract to a local directory. Open the Command Prompt and go to the root directory to install Nodemon, Express, body-parser and Mongoose as follows:
+Download the .zip file and extract to a local directory. Open the Command Prompt and go to the root directory to install Nodemon, Express, body-parser, Pug, and Mongoose as follows:
 
+For Pug installation, use the call script
+```
+npm install pug
+```
 For Nodemon installation, use the call script
 ```
 npm install nodemon
