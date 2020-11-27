@@ -36,16 +36,21 @@ router.post('/confirm_order', function(req, res) {
   Object.entries(orderDetails).forEach(([henID, eggsOrdered]) => {
     if (eggsOrdered > 0) { // if number of eggs purchased from a hen > 0, change hen's egg number in database
       Hen.findById(henID, function(err, hen) { // find hen by ID
-
           if (hen.eggsPurchased) { // adds number of eggs ordered to number of eggs purchased
             hen.eggsPurchased = hen.eggsPurchased + parseInt(eggsOrdered);
           } else {
             hen.eggsPurchased = eggsOrdered;
           }
-
           Hen.findByIdAndUpdate( // updates hen in database, changing number of eggs purchased
             {_id: henID},
-            {eggsPurchased: hen.eggsPurchased}
+            {eggsPurchased: hen.eggsPurchased},
+            function(err, result) {
+              if (err) {
+                console.log(err);
+              } else {
+                console.log(result);
+              }
+            }
           )
       })
     }
