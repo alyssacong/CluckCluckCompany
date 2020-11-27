@@ -8,7 +8,7 @@ This project is built upon Express, Node.js, and Mongoose.
 For Node.js installation, follow the instructions on nodejs.org to download and install the latest version.
 For MongoDB installation, follow the instructions on mongodb.com to download and install the latest MongoDB release.
 
-Download the .zip file and extract to a local directory. Open the Command Prompt and go to the root directory to install Nodemon, Express and Mongoose as follows:
+Download the .zip file and extract to a local directory. Open the Command Prompt and go to the root directory to install Nodemon, Express, body-parser and Mongoose as follows:
 
 For Nodemon installation, use the call script
 ```
@@ -17,6 +17,10 @@ npm install nodemon
 For Express installation, use the call script
 ```
 npm install express --save
+```
+For bodyParser installation, use the call script
+```
+npm install body-parser
 ```
 in the command line.
 For Mongoose installation, use the call script
